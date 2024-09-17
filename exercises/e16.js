@@ -11,7 +11,11 @@
 
 export function find(array, callback) {
   // Your code goes here...
-  
+  for (let ele of array) {
+    if (callback(ele)) {
+      return ele;
+    }
+  }
 }
 
 
