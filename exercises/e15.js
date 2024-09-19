@@ -6,14 +6,11 @@ import { data } from "../data/data";
 
 export function getPlanetsWithNoMoons(data) {
   // Your code goes here...
-  return data.planets 
-  .reduce(function (acc, curVal) {
-    if (!curVal.moons) {
-      acc.push(curVal.name);
-      return acc;
-    } else {
-      return acc;
-    }
+  return data.planets .reduce( (acc, planet) => {
+    if (!planet.moons) {
+      acc.push(planet.name);
+    } 
+    return acc;
   }, []);
 }
 
